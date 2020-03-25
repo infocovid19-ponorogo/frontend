@@ -50,7 +50,7 @@
             </li>
             <li class="flex-1 lg:flex-none mr-3">
               <a
-                href="about-us"
+                href="/about-us"
                 :class="activeLink('/about-us')"
               >
                 <div class="flex justify-center">
@@ -81,7 +81,8 @@
 export default {
   methods: {
     activeLink(link) {
-      return link == this.$route.path ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
+      let firtspath = this.$route.path.split('/')[1]
+      return link == '/' + firtspath ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
     }
   }
 };
