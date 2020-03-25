@@ -1,6 +1,6 @@
 <template>
   <div class="w-full ">
-    <div class="container mx-auto px-5 pt-32 pb-32">
+    <div class="container mx-auto px-5 ">
       <h1 class="text-3xl font-bold">Tentang Kami</h1>
       <p class="my-3">Pada Selasa siang  tanggal 24 Maret 2020,Pemerintah Kabupaten Ponorogo merilis data terkait sebaran Covid19 di Ponorogo, kami pegiat teknologi dan data yang diisi oleh anak-anak muda Ponorogo merasa perlu untuk memberikan informasi yang akurat dan terpercaya terkait Covid19 di Ponorogo. Inisiatif ini diluncurkan karena keprihatinan akan kesimpangsiuran informasi yang beredar di Ponorogo mengenai COVID-19.</p>
       <p class="my-3">Website infocovid19ponorogo.id beserta akun-akun media sosialnya @infocovid19ponorogo di Instagram akan dimutakhirkan berkala dengan esensi isi:</p>
