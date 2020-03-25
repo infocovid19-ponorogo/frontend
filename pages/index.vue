@@ -1,42 +1,42 @@
 <template>
   <div class="w-full ">
     <div class="container mx-auto px-5 pt-32">
-      <h1 class="font-bold text-4xl max-w-xl text-gray-800">Kawal informasi seputar COVID-19 secara tepat dan akurat.</h1>
-      <p class="text-xl text-gray-800">Situs ini merupakan sumber informasi inisiatif sukarela warganet Indonesia pro-data, terdiri dari praktisi kesehatan, akademisi & profesional.</p>
+      <h3 class="font-bold text-4xl max-w-xl text-gray-800">Informasi seputar COVID-19 di Ponorogo secara tepat dan akurat.</h3>
+      <p class="text-xl text-gray-800">Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.</p>
       <div class="container mt-12">
         <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Ponorogo Saat Ini</h3>
         <div class="flex flex-col lg:flex-row justify-between mb-4 lg:mb-8">
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-orange-400 numeric">0</div>
+            <div class="text-6xl font-bold text-orange-400 numeric">{{ dtPonorogo.summary.positif_total }}</div>
             <div class="text-xl text-gray-800">Positif</div>
           </div>
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-green-400 numeric">0</div>
+            <div class="text-6xl font-bold text-green-400 numeric">{{ dtPonorogo.summary.sembuh_total }}</div>
             <div class="text-xl">Sembuh</div>
           </div>
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-red-400 numeric">0</div>
+            <div class="text-6xl font-bold text-red-400 numeric">{{ dtPonorogo.summary.meninggal_total }}</div>
             <div class="text-xl">Meninggal</div>
           </div>
         </div>
 
         <div class="flex flex-col lg:flex-row justify-between">
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">864</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.odr_total }}</div>
             <div class="text-xl">Orang Dalam Resiko (ODR)</div>
           </div>
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">57</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.odp_total }}</div>
             <div class="text-xl">Orang Dalam Pemantuan (ODP)</div>
           </div>
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">6</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.pdp_total }}</div>
             <div class="text-xl">Pasien Dalam Pemantuan (PDP)</div>
           </div>
         </div>
 
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: 23 Maret 2020</p>
+          <p class="font-mono">Pembaruan terakhir: 25 Maret 2020</p>
           <p class="font-sans">Sumber: <span class="italic">Dinas Kesahatan Kabupaten Ponorogo</span></p>
         </div>
 
@@ -81,7 +81,7 @@
         </div>
 
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: 23 Maret 2020</p>
+          <p class="font-mono">Pembaruan terakhir: {{ dtIndo.metadata.lastUpdatedAt }}</p>
           <p class="font-sans">Sumber: <span class="italic">https://kawalcovid19.id/</span></p>
         </div>
 
@@ -108,8 +108,9 @@ export default {
   async asyncData({ $axios }) {
     const dtIndo = await $axios.$get('https://kawalcovid19.harippe.id/api/summary')
     const articles = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts')
+     const dtPonorogo = await $axios.$get('https://api.infocovid19ponorogo.id/api/kecamatan')
 
-    return { dtIndo, articles }
+    return { dtIndo, articles,dtPonorogo }
   }
 }
 </script>
