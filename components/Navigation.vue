@@ -8,7 +8,7 @@
         <div class="lg:relative fixed bottom-0 w-full bg-blue-400 h-16 pt-2">
           <ul class="flex flex-row lg:justify-start justify-between text-center ml-3">
             <li class="flex-1 lg:flex-none ml-3 mr-3">
-              <a href class="flex flex-col border-b-2 border-white lg:pb-2 lg:mr-5">
+              <a href="/" :class="activeLink('/')">
                 <div class="flex justify-center">
                   <svg
                     class="lg:hidden w-5"
@@ -23,13 +23,13 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs text-white py-1">Beranda</span>
+                <span class="lg:text-base text-xs lg:text-white py-1 py-1">Beranda</span>
               </a>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
               <a
-                href
-                class="flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5"
+                href="/info"
+                :class="activeLink('/info')"
               >
                 <div class="flex justify-center">
                   <svg
@@ -45,13 +45,13 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Informasi</span>
+                <span class="lg:text-base text-xs lg:text-white py-1">Informasi</span>
               </a>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
               <a
-                href
-                class="flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5"
+                href="about-us"
+                :class="activeLink('/about-us')"
               >
                 <div class="flex justify-center">
                   <svg
@@ -67,7 +67,7 @@
                     />
                   </svg>
                 </div>
-                <a href="about-us" class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Tentang Kami</a>
+                <span class="lg:text-base text-xs lg:text-white py-1">Tentang Kami</span>
               </a>
             </li>
           </ul>
@@ -78,7 +78,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    activeLink(link) {
+      return link == this.$route.path ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
+    }
+  }
+};
 </script>
 
 <style>
