@@ -67,7 +67,7 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Tentang Kami</span>
+                <a href="about-us" class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Tentang Kami</a>
               </a>
             </li>
           </ul>
