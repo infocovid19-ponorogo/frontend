@@ -12,11 +12,11 @@
         </div>
           <div class="lg:w-1/2 w-full flex flex-col lg:ml-4 lg:mt-0 mt-5">
             <a class="p-4 rounded-lg shadow-lg mb-2 bg-white" href="tel:119">
-              <div class="block font-semibold">Call center</div>
+              <div class="block font-semibold">Call center Ponorogo</div>
               <div class="block text-xs">Nomor Darurat</div>
               <div class="flex flex-row text-blue-400 mt-5">
                 <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M13.04 14.69l1.07-2.14a1 1 0 0 1 1.2-.5l6 2A1 1 0 0 1 22 15v5a2 2 0 0 1-2 2h-2A16 16 0 0 1 2 6V4c0-1.1.9-2 2-2h5a1 1 0 0 1 .95.68l2 6a1 1 0 0 1-.5 1.21L9.3 10.96a10.05 10.05 0 0 0 3.73 3.73zM8.28 4H4v2a14 14 0 0 0 14 14h2v-4.28l-4.5-1.5-1.12 2.26a1 1 0 0 1-1.3.46 12.04 12.04 0 0 1-6.02-6.01 1 1 0 0 1 .46-1.3l2.26-1.14L8.28 4z"/></svg>
-                <span class="text-lg font-bold">119</span>
+                <span class="text-lg font-bold">(0352) 3592999</span>
               </div>
             </a>
             <a class="p-4 rounded-lg shadow-lg mb-2 bg-white" href="tel:1500117">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: 25 Maret 2020</p>
+          <p class="font-mono">Pembaruan terakhir: {{dtPonorogo.summary.last_update_at}}</p>
           <p class="font-sans">Sumber: <span class="italic">Dinas Kesahatan Kabupaten Ponorogo</span></p>
         </div>
 
