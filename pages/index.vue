@@ -132,7 +132,7 @@
       </div>
         <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran</h3>
          <div class="list-article">
-            <iframe style="width:100%;height:400px" src="http://api.infocovid19ponorogo.id/maps"></iframe>
+            <iframe style="width:100%;height:400px" src="https://api.infocovid19ponorogo.id/maps"></iframe>
          </div>
 
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
