@@ -114,7 +114,6 @@
             </div>
           </div>
         </div>
-
         <div class="lg:my-4 text-sm">
           <p class="font-mono">Pembaruan terakhir: {{ dtIndo.metadata.lastUpdatedAt }}</p>
           <p class="font-sans">Sumber: <span class="italic">https://kawalcovid19.id/</span></p>
@@ -131,6 +130,10 @@
               </p> <i style="flex:0 0 2rem"></i> <a href="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></a></div>
           </div>
       </div>
+        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran</h3>
+         <div class="list-article">
+            <iframe style="width:100%;height:400px" src="https://api.infocovid19ponorogo.id/maps"></iframe>
+         </div>
 
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
         <div class="list-article">
