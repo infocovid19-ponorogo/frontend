@@ -40,7 +40,7 @@
           <p class="font-sans">Sumber: <span class="italic">Dinas Kesahatan Kabupaten Ponorogo</span></p>
         </div>
 
-        <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Indonesia dan Provinsi</h3>
+        <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Indonesia dan Provinsi Jawa Timur</h3>
         <div class="flex flex-col lg:flex-row">
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
             <div class="text-2xl font-semibold text-orange-400 my-2">Terkonfirmasi</div>
@@ -85,7 +85,32 @@
           <p class="font-sans">Sumber: <span class="italic">https://kawalcovid19.id/</span></p>
         </div>
 
-        <h3 class="font-semibold text-2xl mt-10 mb-5">Informasi Terkini</h3>
+         <div class="p-5 mt-4 md:mt-12 md:p-8 rounded-lg" style="background-color:#63b3ed">
+          <h3 class="text-xl lg:text-2xl text-white"><strong>Ketahui Resiko dari COVID-19</strong></h3>
+          <br>
+          <div class="flex flex-col lg:flex-row justify-between items-start">
+              <p class="text-white text-lg w-full lg:w-2/3">
+                  COVID-19 merupakan penyakit yang disebabkan Novel Coronavirus 2019. Meski bergejala mirip dengan flu biasa, COVID-19 sampai saat ini memiliki fatalitas lebih tinggi. Virus ini juga menyebar dengan sangat cepat karena bisa pindah dari orang ke orang bahkan sebelum orang tersebut tidak menunjukkan gejala.
+                  <br>
+                  <br> Penting bagi Anda untuk menilai kondisi secara mandiri. Anda bergejala?
+              </p> <i style="flex:0 0 2rem"></i> <a href="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></a></div>
+          </div>
+      </div>
+
+         <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
+        <div class="list-article">
+          <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
+            <div v-for="article in articlesInfoTerkini" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+              <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
+              <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
+            </div>
+          </div>
+          <div class="py-5 text-center">
+            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-2xl mt-10 mb-5">Periksa Fakta</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
             <div v-for="article in articles" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
@@ -97,7 +122,19 @@
             <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
           </div>
         </div>
-      </div>
+
+         <h3 class="font-semibold text-2xl mt-10 mb-5">Tips dan Infografik Terbaru</h3>
+        <div class="list-article">
+          <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
+            <div v-for="article in articlesInfoGrafik" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+              <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
+            
+            </div>
+          </div>
+          <div class="py-5 text-center">
+            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -107,10 +144,12 @@ export default {
   layout: 'home',
   async asyncData({ $axios }) {
     const dtIndo = await $axios.$get('https://kawalcovid19.harippe.id/api/summary')
-    const articles = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts')
+    const articles = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=12')
      const dtPonorogo = await $axios.$get('https://api.infocovid19ponorogo.id/api/kecamatan')
+         const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
+      const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
 
-    return { dtIndo, articles,dtPonorogo }
+    return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini }
   }
 }
 </script>
