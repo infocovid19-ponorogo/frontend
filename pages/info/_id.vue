@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <div class="container mx-auto px-5">
-      <div class="text-xl">Informasi Terkini</div>
+      <div class="text-xl" v-if="category.name">{{ category.name }}</div>
       <h1 class="text-3xl font-bold max-w-xl">{{ article.title.rendered }}</h1>
-      <div class="text-lg max-w-xl" v-html="article.excerpt.rendered"></div>
+      <div v-if="category.id == 2" class="text-lg max-w-xl" v-html="article.excerpt.rendered"></div>
       <div class="my-5 text-sm text-gray-600">
         Sumber artikel:
         <a class="block underline hover:text-blue-400" :href="`//kawalcovid19.id/content/${article.id}/${article.slug}`">https://kawalcovid19.id/content/{{ article.id }}/{{ article.slug }}</a>
@@ -23,7 +23,10 @@ export default {
     const article = await $axios.$get(
       `https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts/${params.id}`
     );
-    return { article };
+    const category = await $axios.$get(
+      `https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/categories/${article.categories[0]}`
+    );
+    return { article, category };
   }
 }
 </script>

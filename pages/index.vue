@@ -138,39 +138,39 @@
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articlesInfoTerkini" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
+            <div v-for="article in articlesInfoTerkini.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
+            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/2`">Lihat Semua Berita</a>
           </div>
         </div>
 
         <h3 class="font-semibold text-2xl mt-10 mb-5">Periksa Fakta</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articles" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
+            <div v-for="article in articles.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
+            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/12`">Lihat Semua Berita</a>
           </div>
         </div>
 
          <h3 class="font-semibold text-2xl mt-10 mb-5">Tips dan Infografik Terbaru</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articlesInfoGrafik" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
+            <div v-for="article in articlesInfoGrafik.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
 
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" href="">Lihat Semua Berita</a>
+            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/19`">Lihat Semua Berita</a>
           </div>
         </div>
     </div>
