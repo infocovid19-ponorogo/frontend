@@ -1,6 +1,6 @@
 <template>
   <div class="w-full ">
-    <div class="container mx-auto px-5 pt-32">
+    <div class="container mx-auto px-5">
       <!-- <h3 class="font-bold text-4xl max-w-xl text-gray-800">Informasi seputar COVID-19 di Ponorogo secara tepat dan akurat.</h3>
       <p class="text-xl text-gray-800">Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.</p> -->
       <div class="flex lg:flex-row flex-col mt-5">
