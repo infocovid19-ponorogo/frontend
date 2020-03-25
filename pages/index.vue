@@ -132,7 +132,7 @@
       </div>
         <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran</h3>
          <div class="list-article">
-            <iframe style="width:100%;height:400px" src="https://api.infocovid19ponorogo.id/maps"></iframe>
+            <iframe style="width:100%;height:400px" src="https://fierce-caverns-85065.herokuapp.com/maps"></iframe>
          </div>
 
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
@@ -183,7 +183,7 @@ export default {
   async asyncData({ $axios }) {
     const dtIndo = await $axios.$get('https://kawalcovid19.harippe.id/api/summary')
     const articles = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=12')
-     const dtPonorogo = await $axios.$get('https://api.infocovid19ponorogo.id/api/kecamatan')
+     const dtPonorogo = await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
          const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
       const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
 
