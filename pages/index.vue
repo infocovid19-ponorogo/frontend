@@ -1,8 +1,43 @@
 <template>
   <div class="w-full ">
     <div class="container mx-auto px-5 pt-32">
-      <h3 class="font-bold text-4xl max-w-xl text-gray-800">Informasi seputar COVID-19 di Ponorogo secara tepat dan akurat.</h3>
-      <p class="text-xl text-gray-800">Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.</p>
+      <!-- <h3 class="font-bold text-4xl max-w-xl text-gray-800">Informasi seputar COVID-19 di Ponorogo secara tepat dan akurat.</h3>
+      <p class="text-xl text-gray-800">Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.</p> -->
+      <div class="flex lg:flex-row flex-col mt-5">
+        <div class="lg:w-1/2 w-full bg-blue-400 rounded-lg">
+          <div class="max-w-sm mx-auto py-24">
+            <img class="h-20 w-full" src="~/assets/icon.svg">
+            <h3 class="font-semibold text-white text-center mt-3">Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.</h3>
+          </div>
+        </div>
+          <div class="lg:w-1/2 w-full flex flex-col lg:ml-4 lg:mt-0 mt-5">
+            <a class="p-4 rounded-lg shadow-lg mb-2 bg-white" href="tel:119">
+              <div class="block font-semibold">Call center</div>
+              <div class="block text-xs">Nomor Darurat</div>
+              <div class="flex flex-row text-blue-400 mt-5">
+                <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M13.04 14.69l1.07-2.14a1 1 0 0 1 1.2-.5l6 2A1 1 0 0 1 22 15v5a2 2 0 0 1-2 2h-2A16 16 0 0 1 2 6V4c0-1.1.9-2 2-2h5a1 1 0 0 1 .95.68l2 6a1 1 0 0 1-.5 1.21L9.3 10.96a10.05 10.05 0 0 0 3.73 3.73zM8.28 4H4v2a14 14 0 0 0 14 14h2v-4.28l-4.5-1.5-1.12 2.26a1 1 0 0 1-1.3.46 12.04 12.04 0 0 1-6.02-6.01 1 1 0 0 1 .46-1.3l2.26-1.14L8.28 4z"/></svg>
+                <span class="text-lg font-bold">119</span>
+              </div>
+            </a>
+            <a class="p-4 rounded-lg shadow-lg mb-2 bg-white" href="tel:1500117">
+              <div class="block font-semibold">Pemprov Jatim</div>
+              <div class="block text-xs">Call Center</div>
+              <div class="flex flex-row text-blue-400 mt-5">
+                <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M13.04 14.69l1.07-2.14a1 1 0 0 1 1.2-.5l6 2A1 1 0 0 1 22 15v5a2 2 0 0 1-2 2h-2A16 16 0 0 1 2 6V4c0-1.1.9-2 2-2h5a1 1 0 0 1 .95.68l2 6a1 1 0 0 1-.5 1.21L9.3 10.96a10.05 10.05 0 0 0 3.73 3.73zM8.28 4H4v2a14 14 0 0 0 14 14h2v-4.28l-4.5-1.5-1.12 2.26a1 1 0 0 1-1.3.46 12.04 12.04 0 0 1-6.02-6.01 1 1 0 0 1 .46-1.3l2.26-1.14L8.28 4z"/></svg>
+                <span class="text-lg font-bold">1500117</span>
+              </div>
+            </a>
+            <a class="p-4 rounded-lg shadow-lg mb-2 bg-white" href="tel:081335909288">
+              <div class="block font-semibold">Dinkes Ponorogo</div>
+              <div class="block text-xs">Hotline Corona</div>
+              <div class="flex flex-row text-blue-400 mt-5">
+                <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M13.04 14.69l1.07-2.14a1 1 0 0 1 1.2-.5l6 2A1 1 0 0 1 22 15v5a2 2 0 0 1-2 2h-2A16 16 0 0 1 2 6V4c0-1.1.9-2 2-2h5a1 1 0 0 1 .95.68l2 6a1 1 0 0 1-.5 1.21L9.3 10.96a10.05 10.05 0 0 0 3.73 3.73zM8.28 4H4v2a14 14 0 0 0 14 14h2v-4.28l-4.5-1.5-1.12 2.26a1 1 0 0 1-1.3.46 12.04 12.04 0 0 1-6.02-6.01 1 1 0 0 1 .46-1.3l2.26-1.14L8.28 4z"/></svg>
+                <span class="text-lg font-bold">081-335-909-288</span>
+              </div>
+            </a>
+          </div>
+      </div>
+
       <div class="container mt-12">
         <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Ponorogo Saat Ini</h3>
         <div class="flex flex-col lg:flex-row justify-between mb-4 lg:mb-8">
@@ -128,7 +163,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
             <div v-for="article in articlesInfoGrafik" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
               <h3 class="font-semibold text-lg">{{ article.title.rendered }}</h3>
-            
+
             </div>
           </div>
           <div class="py-5 text-center">

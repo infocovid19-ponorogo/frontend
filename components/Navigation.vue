@@ -1,22 +1,9 @@
 <template>
-  <nav class="w-full fixed bg-blue-400 lg:p-6">
+  <nav class="w-full fixed bg-blue-400 lg:p-6 shadow-xs">
     <div class="container lg:mx-auto">
       <div class="flex">
         <div class="max-w-sm flex items-center flex-shrink-0 text-white mr-6 lg:p-0 p-6">
-          <svg
-            class="fill-current h-18 w-18 mr-4"
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-            />
-          </svg>
-          <span class="font-semibold text-xl tracking-tight">
-            <div class="block">INFO COVID 19</div>PONOROGO
-          </span>
+          <img class="lg:fill-current h-10 lg:h-16 lg:w-full" src="~/assets/icon.svg" alt="">
         </div>
         <div class="lg:relative fixed bottom-0 w-full bg-blue-400 h-16 pt-2">
           <ul class="flex flex-row lg:justify-start justify-between text-center ml-3">
