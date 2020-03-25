@@ -58,7 +58,7 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Berita</span>
+                <span class="lg:text-base text-xs text-gray-800 lg:text-white py-1">Informasi</span>
               </a>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
