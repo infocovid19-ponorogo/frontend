@@ -137,6 +137,11 @@
             <iframe style="width:100%;height:400px" src="https://fierce-caverns-85065.herokuapp.com/maps"></iframe>
          </div>
 
+        <div class="lg:my-4 text-sm">
+          <p class="font-sans">*)Note:<span class="italic">Titik dipeta merupakan titik kordinat desa,bukan merupakan tempat penderita/pasien</span></p>
+        </div>
+
+
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
