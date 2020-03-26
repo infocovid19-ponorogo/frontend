@@ -14,9 +14,9 @@
       <p class="my-3">Menyampaikan ke publik hal-hal yang perlu dan bisa dilakukan, hal-hal yang perlu dihindari, serta tips-tips kesehatan lain yang mudah diaplikasikan oleh setiap orang dan kelompok masyarakat, seperti di sekolah, tempat kerja, rumah makan dan tempat-tempat umum.</p>
       <div class="ml-5">
         <p class="my-3">Tim relawan membagi dirinya dalam tiga tim:</p>
-        <p class="my-3">Tim teknologi – yang menyiapkan infrastruktur teknologi. Tim ini dipimpin oleh <a href="https://github.com/zainras" style="color:blue">Zain</a> dan <a href="https://github.com/iamwahid" style="color:blue">Niam Wahid</a> dengan didukung dengan data akurat dari Pemerintah Kabupaten Ponorogo.</p>
-        <p class="my-3">Tim data – yang memonitor perkembangan isu dengan mengumpulkan informasi yang beredar, mengecek akurasinya serta menganalisa.</p>
-        <p class="my-3">Tim konten – yang membuat tulisan beserta visualnya untuk dipublikasikan.</p>
+        <p class="my-3">-Tim teknologi – yang menyiapkan infrastruktur teknologi. Tim ini dipimpin oleh <a href="https://github.com/zainras" style="color:blue">Zain</a> dan <a href="https://github.com/iamwahid" style="color:blue">Niam Wahid</a> dengan didukung dengan data akurat dari Pemerintah Kabupaten Ponorogo.</p>
+        <p class="my-3">-Tim data – yang memonitor perkembangan isu dengan mengumpulkan informasi yang beredar, mengecek akurasinya serta menganalisa.</p>
+        <p class="my-3">-Tim konten – yang membuat tulisan beserta visualnya untuk dipublikasikan.</p>
       </div>
       <p class="my-3">Untuk informasi lebih lanjut dapat menghubungi:</p>
       <div class="table w-full border mt-5">
