@@ -82,7 +82,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">51</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.positif_total}}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
@@ -94,7 +94,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">0</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.sembuh_total}}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
@@ -106,7 +106,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">1</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.meninggal_total}}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
@@ -186,8 +186,9 @@ export default {
      const dtPonorogo = await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
          const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
       const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
+      const dtProv=await $$axios.get('http://fierce-caverns-85065.herokuapp.com/api/provinsi');
 
-    return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini }
+    return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini,dtProv }
   }
 }
 </script>
