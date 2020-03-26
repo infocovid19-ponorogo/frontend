@@ -281,7 +281,7 @@
        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Indonesia</h3>
       <div class="list-article">
         <iframe
-          style="width:100%;height:470px"
+          style="width:100%;height:490px"
           src="https://fierce-caverns-85065.herokuapp.com/maps-indo"
         ></iframe>
       </div>
