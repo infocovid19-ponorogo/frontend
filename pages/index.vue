@@ -82,7 +82,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.positif_total}}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.positif_total }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
@@ -94,7 +94,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.sembuh_total}}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.sembuh_total }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
@@ -106,7 +106,7 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{dtProv.summary.meninggal_total}}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.meninggal_total }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
