@@ -278,6 +278,13 @@
           src="https://fierce-caverns-85065.herokuapp.com/maps"
         ></iframe>
       </div>
+       <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Indonesia</h3>
+      <div class="list-article">
+        <iframe
+          style="width:100%;height:470px"
+          src="https://fierce-caverns-85065.herokuapp.com/maps-indo"
+        ></iframe>
+      </div>
 
       <div class="lg:my-4 text-sm">
         <p class="font-sans">
