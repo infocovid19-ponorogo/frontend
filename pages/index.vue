@@ -83,11 +83,11 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.positif_total : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.attributes) ? dtProv.attributes.Kasus_Posi : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.confirmed) ? dtIndo.confirmed.value : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo) ? dtIndo.positif : '_' }}</div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
@@ -95,11 +95,11 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.sembuh_total : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.attributes) ? dtProv.attributes.Kasus_Semb : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.recovered) ? dtIndo.recovered.value : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo) ? dtIndo.sembuh : '_' }}</div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:mb-0 mb-4 p-6">
@@ -107,17 +107,16 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.meninggal_total : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.attributes) ? dtProv.attributes.Kasus_Meni : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.deaths) ? dtIndo.deaths.value : '_' }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo) ? dtIndo.meninggal : '_' }}</div>
             </div>
           </div>
         </div>
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: {{ (dtIndo.metadata) ? dtIndo.metadata.lastUpdatedAt : '-' }}</p>
-          <p class="font-sans">Sumber: <span class="italic">https://kawalcovid19.id/</span></p>
+          <p class="font-sans">Sumber: <span class="italic"><a href="https://kawalcorona.com/">https://kawalcorona.com/</a></span></p>
         </div>
         </no-ssr>
 
@@ -205,16 +204,16 @@ export default {
     this.getDtPonorogo()
     this.getArticles()
     this.getArticlesInfoTerkini()
-    this.getArticlesInfoGrafik()
   },
   methods: {
     async getDtIndo() {
-      const resp = await axios.get('https://kawalcovid19.harippe.id/api/summary')
-      this.dtIndo = resp.data
+      const resp = await axios.get('https://api.kawalcorona.com/indonesia/')
+      this.dtIndo = resp.data[0]
     },
     async getDtProv() {
-      const resp = await axios.get('https://fierce-caverns-85065.herokuapp.com/api/provinsi')
-      this.dtProv = resp.data
+      const resp = await axios.get('https://api.kawalcorona.com/indonesia/provinsi/')
+      let prov = resp.data.find(pv => pv.attributes.Provinsi == 'Jawa Timur')
+      this.dtProv = prov
     },
     async getDtPonorogo() {
       const resp = await axios.get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
