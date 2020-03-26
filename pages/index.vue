@@ -132,7 +132,7 @@
               </p> <i style="flex:0 0 2rem"></i> <nuxt-link to="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></nuxt-link></div>
           </div>
       </div>
-        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponrogo</h3>
+        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponorogo</h3>
          <div class="list-article">
             <iframe style="width:100%;height:400px" src="https://fierce-caverns-85065.herokuapp.com/maps"></iframe>
          </div>
