@@ -11,7 +11,7 @@
             :key="article.id"
             class="rounded-lg shadow p-6 bg-white mb-3"
           >
-            <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
+            <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
             <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
           </div>
         </div>
