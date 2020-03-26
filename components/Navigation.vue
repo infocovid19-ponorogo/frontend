@@ -11,7 +11,8 @@
               <nuxt-link to="/" :class="activeLink('/')">
                 <div class="flex justify-center">
                   <svg
-                    class="lg:hidden w-5"
+                    class="lg:hidden w-5 fill-current"
+                    v-bind:class="isActiveLink('/') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     width="18"
@@ -33,7 +34,8 @@
               >
                 <div class="flex justify-center">
                   <svg
-                    class="lg:hidden w-5"
+                    class="lg:hidden w-5 fill-current"
+                    v-bind:class="isActiveLink('/info') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     width="18"
@@ -55,7 +57,8 @@
               >
                 <div class="flex justify-center">
                   <svg
-                    class="lg:hidden w-5"
+                    class="lg:hidden w-5 fill-current"
+                    v-bind:class="isActiveLink('/about-us') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     width="18"
@@ -81,8 +84,12 @@
 export default {
   methods: {
     activeLink(link) {
+      let isActive = this.isActiveLink(link)
+      return (isActive) ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
+    },
+    isActiveLink(link) {
       let firtspath = this.$route.path.split('/')[1]
-      return link == '/' + firtspath ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
+      return link == '/' + firtspath
     }
   }
 };

@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style>
+  #article-content {
+    overflow-wrap: break-word;
+  }
   #article-content h1{
     margin-bottom: 18px;
     font-size: 36px;
