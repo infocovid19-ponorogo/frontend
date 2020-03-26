@@ -127,7 +127,7 @@
                   COVID-19 merupakan penyakit yang disebabkan Novel Coronavirus 2019. Meski bergejala mirip dengan flu biasa, COVID-19 sampai saat ini memiliki fatalitas lebih tinggi. Virus ini juga menyebar dengan sangat cepat karena bisa pindah dari orang ke orang bahkan sebelum orang tersebut tidak menunjukkan gejala.
                   <br>
                   <br> Penting bagi Anda untuk menilai kondisi secara mandiri. Anda bergejala?
-              </p> <i style="flex:0 0 2rem"></i> <a href="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></a></div>
+              </p> <i style="flex:0 0 2rem"></i> <nuxt-link to="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></nuxt-link></div>
           </div>
       </div>
         <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran</h3>
@@ -139,12 +139,12 @@
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
             <div v-for="article in articlesInfoTerkini.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
+              <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/2`">Lihat Semua Berita</a>
+            <nuxt-link class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :to="`/category/2`">Lihat Semua Berita</nuxt-link>
           </div>
         </div>
 
@@ -152,12 +152,12 @@
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
             <div v-for="article in articles.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
+              <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/12`">Lihat Semua Berita</a>
+            <nuxt-link class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :to="`/category/12`">Lihat Semua Berita</nuxt-link>
           </div>
         </div>
 
@@ -165,12 +165,12 @@
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
             <div v-for="article in articlesInfoGrafik.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
-              <a :href="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></a>
+              <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
 
             </div>
           </div>
           <div class="py-5 text-center">
-            <a class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :href="`/category/19`">Lihat Semua Berita</a>
+            <nuxt-link class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm" :to="`/category/19`">Lihat Semua Berita</nuxt-link>
           </div>
         </div>
     </div>

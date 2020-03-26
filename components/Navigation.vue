@@ -8,7 +8,7 @@
         <div class="lg:relative fixed bottom-0 w-full bg-blue-400 h-16 pt-2">
           <ul class="flex flex-row lg:justify-start justify-between text-center ml-3">
             <li class="flex-1 lg:flex-none ml-3 mr-3">
-              <a href="/" :class="activeLink('/')">
+              <nuxt-link to="/" :class="activeLink('/')">
                 <div class="flex justify-center">
                   <svg
                     class="lg:hidden w-5"
@@ -24,11 +24,11 @@
                   </svg>
                 </div>
                 <span class="lg:text-base text-xs lg:text-white py-1 py-1">Beranda</span>
-              </a>
+              </nuxt-link>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
-              <a
-                href="/info"
+              <nuxt-link
+                to="/info"
                 :class="activeLink('/info')"
               >
                 <div class="flex justify-center">
@@ -46,11 +46,11 @@
                   </svg>
                 </div>
                 <span class="lg:text-base text-xs lg:text-white py-1">Informasi</span>
-              </a>
+              </nuxt-link>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
-              <a
-                href="/about-us"
+              <nuxt-link
+                to="/about-us"
                 :class="activeLink('/about-us')"
               >
                 <div class="flex justify-center">
@@ -68,7 +68,7 @@
                   </svg>
                 </div>
                 <span class="lg:text-base text-xs lg:text-white py-1">Tentang Kami</span>
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </div>
