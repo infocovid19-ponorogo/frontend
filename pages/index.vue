@@ -186,7 +186,7 @@ export default {
      const dtPonorogo = await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
          const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
       const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
-      const dtProv=await $$axios.get('http://fierce-caverns-85065.herokuapp.com/api/provinsi');
+      const dtProv=await $axios.get('http://fierce-caverns-85065.herokuapp.com/api/provinsi');
 
     return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini,dtProv }
   }
