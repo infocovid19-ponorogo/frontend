@@ -130,7 +130,7 @@
               </p> <i style="flex:0 0 2rem"></i> <nuxt-link to="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/" target="_blank" class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"><b>Nilai Diri Saya</b></nuxt-link></div>
           </div>
       </div>
-        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran</h3>
+        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponrogo</h3>
          <div class="list-article">
             <iframe style="width:100%;height:400px" src="https://fierce-caverns-85065.herokuapp.com/maps"></iframe>
          </div>
@@ -186,7 +186,7 @@ export default {
      const dtPonorogo = await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
          const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
       const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
-      const dtProv=await $axios.get('http://fierce-caverns-85065.herokuapp.com/api/provinsi');
+      const dtProv=await $axios.get('http://fierce-caverns-85065.herokuapp.com/api/provinsi')
 
     return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini,dtProv }
   }
