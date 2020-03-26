@@ -42,39 +42,40 @@
         <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Ponorogo Saat Ini</h3>
         <div class="flex flex-col lg:flex-row justify-between mb-4 lg:mb-8">
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-orange-400 numeric">{{ dtPonorogo.summary.positif_total }}</div>
+            <div class="text-6xl font-bold text-orange-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.positif_total: '_' }}</div>
             <div class="text-xl text-gray-800">Positif</div>
           </div>
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-green-400 numeric">{{ dtPonorogo.summary.sembuh_total }}</div>
+            <div class="text-6xl font-bold text-green-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.sembuh_total: '_' }}</div>
             <div class="text-xl">Sembuh</div>
           </div>
           <div class="p-4 rounded text-center bg-white shadow lg:shadow-lg w-full lg:w-1/3 mb-4 lg:mb-0 lg:mr-8">
-            <div class="text-6xl font-bold text-red-400 numeric">{{ dtPonorogo.summary.meninggal_total }}</div>
+            <div class="text-6xl font-bold text-red-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.meninggal_total: '_' }}</div>
             <div class="text-xl">Meninggal</div>
           </div>
         </div>
 
         <div class="flex flex-col lg:flex-row justify-between">
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.odr_total }}</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.odr_total: '_' }}</div>
             <div class="text-xl">Orang Dalam Resiko (ODR)</div>
           </div>
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.odp_total }}</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.odp_total: '_' }}</div>
             <div class="text-xl">Orang Dalam Pemantuan (ODP)</div>
           </div>
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
-            <div class="text-5xl font-semibold text-blue-400 numeric">{{ dtPonorogo.summary.pdp_total }}</div>
+            <div class="text-5xl font-semibold text-blue-400 numeric">{{ (dtPonorogo.summary) ? dtPonorogo.summary.pdp_total: '_' }}</div>
             <div class="text-xl">Pasien Dalam Pemantuan (PDP)</div>
           </div>
         </div>
 
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: {{dtPonorogo.summary.last_update_at}}</p>
+          <p class="font-mono">Pembaruan terakhir: {{(dtPonorogo.summary) ? dtPonorogo.summary.last_update_at: '_'}}</p>
           <p class="font-sans">Sumber: <span class="italic">Dinas Kesahatan Kabupaten Ponorogo</span></p>
         </div>
 
+        <no-ssr>
         <h3 class="font-semibold text-2xl mt-10 mb-5">Jumlah Kasus di Indonesia dan Provinsi Jawa Timur</h3>
         <div class="flex flex-col lg:flex-row">
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
@@ -82,11 +83,11 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.positif_total }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.positif_total : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtIndo.confirmed.value }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.confirmed) ? dtIndo.confirmed.value : '_' }}</div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
@@ -94,11 +95,11 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.sembuh_total }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.sembuh_total : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtIndo.recovered.value }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.recovered) ? dtIndo.recovered.value : '_' }}</div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:mb-0 mb-4 p-6">
@@ -106,18 +107,19 @@
             <hr>
             <div class="flex justify-between mt-4">
               <div class="font-semibold">Jawa Timur</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtProv.summary.meninggal_total }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtProv.summary) ? dtProv.summary.meninggal_total : '_' }}</div>
             </div>
             <div class="flex justify-between">
               <div class="font-semibold">Indonesia</div>
-              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ dtIndo.deaths.value }}</div>
+              <div class=" text-2xl font-semibold text-gray-700 numeric">{{ (dtIndo.deaths) ? dtIndo.deaths.value : '_' }}</div>
             </div>
           </div>
         </div>
         <div class="lg:my-4 text-sm">
-          <p class="font-mono">Pembaruan terakhir: {{ dtIndo.metadata.lastUpdatedAt }}</p>
+          <p class="font-mono">Pembaruan terakhir: {{ (dtIndo.metadata) ? dtIndo.metadata.lastUpdatedAt : '-' }}</p>
           <p class="font-sans">Sumber: <span class="italic">https://kawalcovid19.id/</span></p>
         </div>
+        </no-ssr>
 
          <div class="p-5 mt-4 md:mt-12 md:p-8 rounded-lg" style="background-color:#63b3ed">
           <h3 class="text-xl lg:text-2xl text-white"><strong>Ketahui Resiko dari COVID-19</strong></h3>
@@ -138,7 +140,7 @@
          <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articlesInfoTerkini.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+            <div v-for="article in articlesInfoTerkini" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
               <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
@@ -151,7 +153,7 @@
         <h3 class="font-semibold text-2xl mt-10 mb-5">Periksa Fakta</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articles.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+            <div v-for="article in articles" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
               <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
               <div v-if="article.excerpt.rendered" v-html="article.excerpt.rendered"></div>
             </div>
@@ -164,7 +166,7 @@
          <h3 class="font-semibold text-2xl mt-10 mb-5">Tips dan Infografik Terbaru</h3>
         <div class="list-article">
           <div class="grid grid-cols-1 lg:grid-cols-2 row-gap-2 col-gap-4">
-            <div v-for="article in articlesInfoGrafik.slice(0, 4)" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
+            <div v-for="article in articlesInfoGrafik" :key="article.id" class="rounded-lg shadow p-6 bg-white mb-3">
               <nuxt-link :to="`/info/${article.id}`" class="font-semibold text-lg hover:underline"><h3 >{{ article.title.rendered }}</h3></nuxt-link>
 
             </div>
@@ -178,17 +180,53 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   layout: 'home',
-  async asyncData({ $axios }) {
-    const dtIndo = await $axios.$get('https://kawalcovid19.harippe.id/api/summary')
-    const articles = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=12')
-     const dtPonorogo = await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
-    const articlesInfoTerkini = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2')
-      const articlesInfoGrafik = await $axios.$get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19')
-      const dtProv=await $axios.$get('https://fierce-caverns-85065.herokuapp.com/api/provinsi')
-
-    return { dtIndo, articles,dtPonorogo,articlesInfoGrafik,articlesInfoTerkini,dtProv }
+  data() {
+      return {
+        dtIndo: {},
+        dtProv: {},
+        dtPonorogo: {},
+        articles: {},
+        articlesInfoTerkini: {},
+        articlesInfoGrafik: {},
+      }
+  },
+  created() {
+    this.getDtIndo()
+    this.getDtProv()
+    this.getDtPonorogo()
+    this.getArticles()
+    this.getArticlesInfoTerkini()
+    this.getArticlesInfoGrafik()
+  },
+  methods: {
+    async getDtIndo() {
+      const resp = await axios.get('https://kawalcovid19.harippe.id/api/summary')
+      this.dtIndo = resp.data
+    },
+    async getDtProv() {
+      const resp = await axios.get('https://fierce-caverns-85065.herokuapp.com/api/provinsi')
+      this.dtProv = resp.data
+    },
+    async getDtPonorogo() {
+      const resp = await axios.get('https://fierce-caverns-85065.herokuapp.com/api/kecamatan')
+      this.dtPonorogo = resp.data
+    },
+    async getArticles() {
+      const resp = await axios.get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=12&per_page=4')
+      this.articles = resp.data
+    },
+    async getArticlesInfoTerkini() {
+      const resp = await axios.get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=2&per_page=4')
+      this.articlesInfoTerkini = resp.data
+    },
+    async getArticlesInfoGrafik() {
+      const resp = await axios.get('https://kawalcovid19-wp.herokuapp.com/wp/wp-json/wp/v2/posts?categories=19&per_page=4')
+      this.articlesInfoGrafik = resp.data
+    },
   }
 }
 </script>
