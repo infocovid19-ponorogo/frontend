@@ -217,7 +217,7 @@
           </div>
         </div>
 
-        <div class="bg-red-400 p-5 mt-4 md:mt-12 md:p-8 rounded-lg">
+        <!-- <div class="bg-red-400 p-5 mt-4 md:mt-12 md:p-8 rounded-lg">
           <h3 class="text-xl lg:text-2xl text-white">
             <strong>#GotongRoyong Bantu Tenaga Medis</strong>
           </h3>
@@ -232,11 +232,11 @@
 
             </div>
             <i style="flex:0 0 2rem"></i>
-            <!-- WA DONASI DESKTOP -->
+          
             <div class="hidden lg:block">
               <btn-wa-donasi></btn-wa-donasi>
             </div>
-            <!-- WA DONASI DESKTOP -->
+         
           </div>
           <div class="text-white">
             <div class="lg:text-center my-2">Bantuan dapat diserahkan ke:</div>
@@ -264,12 +264,12 @@
               </div>
             </div>
           </div>
-          <!-- WA DONASI MOBILE -->
+      
           <div class="block lg:hidden mt-10 mb-5 lg:my-0">
             <btn-wa-donasi></btn-wa-donasi>
           </div>
-          <!-- WA DONASI MOBILE -->
-        </div>
+       
+        </div> -->
       </div>
       <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponorogo</h3>
       <div class="list-article">
@@ -291,7 +291,7 @@
           *)Note:
           <span
             class="italic"
-          >Titik dipeta merupakan titik kordinat desa,bukan merupakan tempat penderita/pasien</span>
+          >Titik dipeta merupakan titik kordinat desa atau wilayah,bukan merupakan tempat penderita/pasien</span>
         </p>
       </div>
 
