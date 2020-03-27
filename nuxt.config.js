@@ -9,7 +9,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { name: 'keywords', content: 'Covid-19 Ponorogo, Ponorogo, Informasi, Covid-19, Indonesia, Jawa Timur'},
+      { hid: 'description', name: 'description', content: 'Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
