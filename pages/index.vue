@@ -135,7 +135,7 @@
 
         <h3
           class="font-semibold text-2xl mt-10 mb-5"
-        >Jumlah Kasus di Indonesia dan Provinsi Jawa Timur</h3>
+        >Jumlah Kasus  Global, Indonesia dan Provinsi Jawa Timur</h3>
         <div class="flex flex-col lg:flex-row">
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
             <div class="text-2xl font-semibold text-orange-400 my-2">Terkonfirmasi</div>
@@ -151,6 +151,12 @@
               <div
                 class="text-2xl font-semibold text-gray-700 numeric"
               >{{ (dtIndo) ? dtIndo.positif : '_' }}</div>
+            </div>
+             <div class="flex justify-between">
+              <div class="font-semibold">Global</div>
+              <div
+                class="text-2xl font-semibold text-gray-700 numeric"
+              >{{ (dtPositif) ? dtPositif.value : '_' }}</div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:border-r lg:mb-0 mb-4 p-6">
@@ -168,6 +174,12 @@
                 class="text-2xl font-semibold text-gray-700 numeric"
               >{{ (dtIndo) ? dtIndo.sembuh : '_' }}</div>
             </div>
+            <div class="flex justify-between">
+              <div class="font-semibold">Global</div>
+              <div
+                class="text-2xl font-semibold text-gray-700 numeric"
+              >{{ (dtSembuh) ? dtSembuh.value : '_' }}</div>
+            </div>
           </div>
           <div class="w-full lg:w-1/3 bg-white lg:mb-0 mb-4 p-6">
             <div class="text-2xl font-semibold text-red-500 my-2">Meninggal</div>
@@ -183,6 +195,12 @@
               <div
                 class="text-2xl font-semibold text-gray-700 numeric"
               >{{ (dtIndo) ? dtIndo.meninggal : '_' }}</div>
+            </div>
+            <div class="flex justify-between">
+              <div class="font-semibold">Global</div>
+              <div
+                class="text-2xl font-semibold text-gray-700 numeric"
+              >{{ (dtMeninggal) ? dtMeninggal.value : '_' }}</div>
             </div>
           </div>
         </div>
@@ -390,7 +408,10 @@ export default {
       dtPonorogo: {},
       articles: {},
       articlesInfoTerkini: {},
-      articlesInfoGrafik: {}
+      articlesInfoGrafik: {},
+      dtSembuh:{},
+      dtPositif:{},
+      dtMeninggal:{},
     };
   },
   created() {
@@ -400,8 +421,23 @@ export default {
     this.getArticles();
     this.getArticlesInfoTerkini();
     this.getArticlesInfoGrafik();
+    this.getDtSembuh();
+    this.getDtPositif();
+    this.getDtMeninggal();
   },
   methods: {
+    async getDtPositif() {
+      const resp = await axios.get("https://api.kawalcorona.com/positif/");
+      this.dtPositif = resp.data;
+    },
+     async getDtSembuh() {
+      const resp = await axios.get("https://api.kawalcorona.com/sembuh/");
+      this.dtSembuh = resp.data;
+    },
+     async getDtMeninggal() {
+      const resp = await axios.get("https://api.kawalcorona.com/meninggal/");
+      this.dtMeninggal = resp.data;
+    },
     async getDtIndo() {
       const resp = await axios.get("https://api.kawalcorona.com/indonesia/");
       this.dtIndo = resp.data[0];
