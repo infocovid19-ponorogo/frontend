@@ -50,6 +50,7 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
   ],
   /*
   ** Axios module configuration
@@ -66,5 +67,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  moment: {
+    defaultLocale: 'id',
+    locales: ['id']
   }
 }
