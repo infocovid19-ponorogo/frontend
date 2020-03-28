@@ -113,13 +113,13 @@
             <div
               class="text-5xl font-semibold text-blue-400 numeric"
             >{{ (dtPonorogo.summary) ? dtPonorogo.summary.odp_total: '_' }}</div>
-            <div class="text-xl">Orang Dalam Pemantuan (ODP)</div>
+            <div class="text-xl">Orang Dalam Pemantauan (ODP)</div>
           </div>
           <div class="rounded shadow lg:shadow-lg bg-white lg:w-1/2 mb-4 lg:mb-0 lg:mr-8 p-6">
             <div
               class="text-5xl font-semibold text-blue-400 numeric"
             >{{ (dtPonorogo.summary) ? dtPonorogo.summary.pdp_total: '_' }}</div>
-            <div class="text-xl">Pasien Dalam Pemantuan (PDP)</div>
+            <div class="text-xl">Pasien Dalam Pengawasan (PDP)</div>
           </div>
         </div>
 
@@ -232,11 +232,11 @@
 
             </div>
             <i style="flex:0 0 2rem"></i>
-          
+
             <div class="hidden lg:block">
               <btn-wa-donasi></btn-wa-donasi>
             </div>
-         
+
           </div>
           <div class="text-white">
             <div class="lg:text-center my-2">Bantuan dapat diserahkan ke:</div>
@@ -264,11 +264,11 @@
               </div>
             </div>
           </div>
-      
+
           <div class="block lg:hidden mt-10 mb-5 lg:my-0">
             <btn-wa-donasi></btn-wa-donasi>
           </div>
-       
+
         </div> -->
       </div>
       <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponorogo</h3>
