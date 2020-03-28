@@ -10,6 +10,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'keywords', content: 'Covid-19 Ponorogo, Ponorogo, Informasi, Covid-19, Indonesia, Jawa Timur'},
+      { name: 'google-site-verification', content: 'X7ISdwhbArSic2GMDbT0o3sj_Z-AkrkgsEvv8kiDqu8'},
       { hid: 'description', name: 'description', content: 'Situs ini merupakan sumber informasi inisiatif sukarela warganet Ponorogo yang pro-data.'},
     ],
     link: [
