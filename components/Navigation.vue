@@ -2,10 +2,10 @@
   <nav class="w-full fixed bg-blue-400 lg:p-6 shadow-xs">
     <div class="container lg:mx-auto">
       <div class="flex">
-        <div class="max-w-sm flex items-center flex-shrink-0 text-white mr-6 lg:p-0 p-6">
-          <img class="lg:fill-current h-10 lg:h-16 lg:w-full" src="~/assets/icon.svg" alt="">
+        <div class="max-w-sm flex items-center flex-shrink-0 text-white mr-6 lg:p-0 pl-6 py-2">
+          <img class="lg:fill-current h-10 lg:h-16 lg:w-full" src="~/assets/icon.svg" alt="infocovid19ponorogo.id">
         </div>
-        <div class="lg:relative fixed bottom-0 w-full bg-blue-400 h-16 pt-2">
+        <div class="lg:relative fixed bottom-0 w-full bg-blue-400 h-14 py-2 lg:pt-4">
           <ul class="flex flex-row lg:justify-start justify-between text-center ml-3">
             <li class="flex-1 lg:flex-none ml-3 mr-3">
               <nuxt-link to="/" :class="activeLink('/')">
@@ -15,8 +15,8 @@
                     v-bind:class="isActiveLink('/') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="15"
+                    height="15"
                   >
                     <path
                       class="heroicon-ui"
@@ -24,7 +24,7 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs lg:text-white py-1 py-1">Beranda</span>
+                <span class="lg:text-base text-xs lg:text-white pb-1">Beranda</span>
               </nuxt-link>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
@@ -38,8 +38,8 @@
                     v-bind:class="isActiveLink('/info') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="15"
+                    height="15"
                   >
                     <path
                       class="heroicon-ui"
@@ -47,7 +47,7 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs lg:text-white py-1">Informasi</span>
+                <span class="lg:text-base text-xs lg:text-white pb-1">Informasi</span>
               </nuxt-link>
             </li>
             <li class="flex-1 lg:flex-none mr-3">
@@ -61,8 +61,8 @@
                     v-bind:class="isActiveLink('/about-us') ? 'text-white' : 'text-black'"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="15"
+                    height="15"
                   >
                     <path
                       class="heroicon-ui"
@@ -70,7 +70,7 @@
                     />
                   </svg>
                 </div>
-                <span class="lg:text-base text-xs lg:text-white py-1">Tentang Kami</span>
+                <span class="lg:text-base text-xs lg:text-white pb-1">Tentang Kami</span>
               </nuxt-link>
             </li>
           </ul>
@@ -85,7 +85,7 @@ export default {
   methods: {
     activeLink(link) {
       let isActive = this.isActiveLink(link)
-      return (isActive) ? 'flex flex-col text-white border-b-2 border-white lg:pb-2 lg:mr-5' : 'flex flex-col border-b-2 border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
+      return (isActive) ? 'flex flex-col text-white lg:border-b-2 lg:border-white lg:pb-2 lg:mr-5' : 'flex flex-col lg:border-b-2 lg:border-gray-400 lg:border-none lg:pb-2 lg:mr-5'
     },
     isActiveLink(link) {
       let firtspath = this.$route.path.split('/')[1]

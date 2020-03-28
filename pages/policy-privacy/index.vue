@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full ">
+  <div class="w-full mt-5">
     <div class="container mx-auto px-5 ">
       <h1 class="text-3xl font-bold">Kebijakan Privasi</h1>
      <br>
@@ -8,7 +8,7 @@
      <br>
      <br>
      <p><a href="https://infocovid19ponorogo.id/">Infocovid19ponorogo</a> tidak menerima imbalan apa pun dari pihak mana pun, dan tidak akan menjual data yang didapat dan tersedia di laman ini kepada pihak mana pun. <strong>Semua data yang tersedia di <a href="https://infocovid19ponorogo.id/">Infocovid19ponorogo</a> boleh disebarluaskan dengan menyertakan pranala sumber lama <a href="https://infocovid19ponorogo.id/">Infocovid19ponorogo</a> tanpa melakukan perubahan, penambahan atau pun pengurangan dari hal yang termuat di laman yang dikutip. <a href="https://infocovid19ponorogo.id/">Infocovid19ponorogo</a> tidak bertanggung jawab apabila ada pihak luar yang mengambil data dari <a href="https://infocovid19ponorogo.id/">Infocovid19ponorogo</a> untuk kemudian direkayasa demi kepentingan pribadi mereka</strong>.</p>
-     
+
   </div>
   </div>
 </template>

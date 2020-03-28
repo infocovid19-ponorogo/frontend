@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full mt-5">
     <div class="container mx-auto px-5">
       <div class="text-xl" v-if="category.name">{{ category.name }}</div>
       <h1 class="text-3xl font-bold max-w-xl">{{ article.title.rendered }}</h1>

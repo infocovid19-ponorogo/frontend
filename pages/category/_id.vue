@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full mt-5">
     <div class="container mx-auto px-5">
       <h1 class="text-3xl font-bold">{{ category.name }}</h1>
       <p>Informasi terkini mengenai COVID-19. 100% faktual, dari sumber-sumber terpercaya.</p>
