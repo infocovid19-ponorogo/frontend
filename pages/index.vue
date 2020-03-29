@@ -129,7 +129,7 @@
           >Pembaruan terakhir: {{(dtPonorogo.summary) ? dtPonorogo.summary.last_update_at: '_'}}</p>
           <p class="font-sans">
             Sumber:
-            <span class="italic">Dinas Kesahatan Kabupaten Ponorogo</span>
+            <span class="italic">https://ponorogo.go.id/corona/</span>
           </p>
         </div>
 
