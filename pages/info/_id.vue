@@ -92,5 +92,8 @@ export default {
     color: rgb(102, 107, 115);
     position: absolute;
     margin-left: -15px;
-}
+  }
+  #article-content .wp-block-table {
+    overflow-x: auto;
+  }
 </style>
