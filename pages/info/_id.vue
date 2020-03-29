@@ -34,7 +34,6 @@ export default {
 <style>
   #article-content {
     overflow-wrap: break-word;
-    overflow: scroll;
   }
   #article-content h1{
     margin-bottom: 18px;
