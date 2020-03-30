@@ -296,7 +296,7 @@
           src="https://fierce-caverns-85065.herokuapp.com/maps"
         ></iframe>
       </div> -->
-       <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Indonesia</h3>
+       <!-- <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Indonesia</h3>
       <div class="list-article">
         <iframe
           style="width:100%;height:490px"
@@ -318,7 +318,7 @@
             class="italic"
           >Titik dipeta merupakan titik kordinat desa atau wilayah,bukan merupakan tempat penderita/pasien</span>
         </p>
-      </div>
+      </div> -->
 
       <h3 class="font-semibold text-2xl mt-10 mb-5">Info Terkini</h3>
       <div class="list-article">
@@ -385,6 +385,66 @@
             class="text-blue-400 p-4 rounded border-2 border-blue-300 font-bold text-sm"
             :to="`/category/19`"
           >Lihat Semua Berita</nuxt-link>
+        </div>
+      </div>
+       <h3 class="font-semibold text-2xl mt-10 mb-5">Tautan Penting</h3>
+       <div class="list-article">
+        <div class="grid grid-cols-1 lg:grid-cols-3 row-gap-2 col-gap-4">
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://ponorogo.go.id/corona/" target="_blank" class="font-semibold text-lg hover:underline">
+              <h5><u>Situs Resmi Kabupaten Ponorogo COVID-19</u></h5>
+            </a>
+          </div>
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://gis-kawalcovid19.hub.arcgis.com/" target="_blank" class="font-semibold text-lg hover:underline">
+              <h5><u>GIS Hub Kawal COVID-19</u></h5>
+            </a>
+          </div>
+           <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://experience.arcgis.com/experience/bf4eb5d76e98423c865678e32c8937d4" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Peta Kasus COVID-19 di Indonesia</u></h5>
+            </a>
+          </div>
+           <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://turnbackhoax.id/2020/02/06/kompilasi-post-periksa-fakta-mafindo-berkaitan-dengan-virus-corona/" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Kompilasi TurnBackHoax COVID-19</u></h5>
+            </a>
+          </div>
+           <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://kawalcovid19.maps.arcgis.com/apps/opsdashboard/index.html#/8caa437261f2440093ce28e33e3ba6dd"  target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Peta Rumah Sakit Rujukan di Indonesia</u></h5>
+            </a>
+          </div>
+           <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>WHO</u></h5>
+            </a>
+          </div>
+           <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://www.unicef.org/indonesia/id/coronavirus" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>UNICEF Indonesia</u></h5>
+            </a>
+          </div>
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://www.covid19.go.id/" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Situs Resmi Pemerintah untuk COVID-19</u></h5>
+            </a>
+          </div>
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"  target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Peta Kasus Global COVID-19</u></h5>
+            </a>
+          </div>
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Peta Kasus Global COVID-19 (versi Mobile)</u></h5>
+            </a>
+          </div>
+          <div class="rounded-lg shadow p-3 bg-white mb-3">
+            <a href="https://kominfo.go.id/content/all/virus_corona" target="_blank"  class="font-semibold text-lg hover:underline">
+              <h5><u>Kominfo - Kumpulan Hoaks Terkait Virus Corona</u></h5>
+            </a>
+          </div>
         </div>
       </div>
     </div>
