@@ -226,7 +226,7 @@
             </p>
             <i style="flex:0 0 2rem"></i>
             <a
-              to="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/"
+              href="https://checkupcovid19.jatimprov.go.id/covid19/#!/checkup/"
               target="_blank"
               class="px-10 py-4 rounded-lg text-white border-2 border-solid border-white hover:bg-brand-green-light"
             >
