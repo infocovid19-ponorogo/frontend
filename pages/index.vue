@@ -511,7 +511,7 @@ export default {
     },
     async getDtPonorogo() {
       const resp = await axios.get(
-        "https://fierce-caverns-85065.herokuapp.com/api/kecamatan"
+        "https://fierce-caverns-85065.herokuapp.com/api/kabupaten"
       );
       this.dtPonorogo = resp.data;
     },
