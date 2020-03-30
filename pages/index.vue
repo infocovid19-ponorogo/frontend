@@ -289,13 +289,13 @@
 
         </div> -->
       </div>
-      <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponorogo</h3>
+      <!-- <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Ponorogo</h3>
       <div class="list-article">
         <iframe
           style="width:100%;height:400px"
           src="https://fierce-caverns-85065.herokuapp.com/maps"
         ></iframe>
-      </div>
+      </div> -->
        <h3 class="font-semibold text-2xl mt-10 mb-5">Peta Persebaran di Indonesia</h3>
       <div class="list-article">
         <iframe
